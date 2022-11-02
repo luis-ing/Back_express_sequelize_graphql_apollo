@@ -1,5 +1,4 @@
 import { gql } from 'apollo-server-express';
-// import { Tablero_metodologia } from '../models/Tablero_metodologia.js';
 import db from '../models/AllModels.js';
 
 export const typeDefs = gql`

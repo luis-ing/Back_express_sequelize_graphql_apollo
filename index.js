@@ -10,7 +10,6 @@ import { typeDefs as TableroMetodologiaTypeDefs, resolver as TableroMetodologiaR
 import { typeDefs as ContenidoColumnasTypeDefs, resolver as ContenidoColumnasResolvers } from './graphql/Contenido_columnas.js';
 import { typeDefs as ProyectoTypeDefs, resolver as ProyectoResolvers } from './graphql/Proyecto.js';
 import { typeDefs as TicketTypeDefs, resolver as TicketResolvers } from './graphql/Ticket.js';
-// import { resolvers as TaskResolvers } from './graphql/TaskResolvers.js';
 
 app.set('port', process.env.PORT || 4000);
 

@@ -1,5 +1,4 @@
 import { gql } from 'apollo-server-express';
-// import { Proyecto } from '../models/Proyecto.js';
 import db from '../models/AllModels.js';
 
 export const typeDefs = gql`
@@ -14,6 +13,7 @@ export const typeDefs = gql`
         activo: Int
         f_creacion: DateTime
         id_tablero_metodologia: Int
+        tablero_metodologia: tablero_metodologia
     }
 `;
 
@@ -33,4 +33,10 @@ export const resolver = {
             }
         }
     },
+
+    proyectos: {
+        tablero_metodologia: async (root) => {
+            return db.Tablero_metodologia.findByPk(root.id_tablero_metodologia).then(res => res)
+        }
+    }
 };

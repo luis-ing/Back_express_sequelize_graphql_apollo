@@ -1,5 +1,4 @@
 import { gql } from 'apollo-server-express';
-// import { Contenido_columnas } from '../models/Contenido_columnas.js';
 import db from '../models/AllModels.js';
 
 export const typeDefs = gql`
