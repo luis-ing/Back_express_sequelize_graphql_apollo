@@ -5,11 +5,12 @@ import { makeExecutableSchema } from '@graphql-tools/schema';
 // Iniciamos express
 const app = express();
 
-import { typeDefs as TaskTypeDefs, resolver as TaskResolvers } from './graphql/Task.js';
 import { typeDefs as TableroMetodologiaTypeDefs, resolver as TableroMetodologiaResolvers } from './graphql/Tablero_metodologia.js';
 import { typeDefs as ContenidoColumnasTypeDefs, resolver as ContenidoColumnasResolvers } from './graphql/Contenido_columnas.js';
 import { typeDefs as ProyectoTypeDefs, resolver as ProyectoResolvers } from './graphql/Proyecto.js';
 import { typeDefs as TicketTypeDefs, resolver as TicketResolvers } from './graphql/Ticket.js';
+import { typeDefs as UsuarioTypeDefs, resolver as UsuarioResolvers } from './graphql/Usuario.js';
+import { typeDefs as PrioridadTypeDefs, resolver as PrioridadResolvers } from './graphql/Prioridad.js';
 
 app.set('port', process.env.PORT || 4000);
 
@@ -20,18 +21,20 @@ const Query = `
 const schema = makeExecutableSchema({
     typeDefs: [
         Query,
-        TaskTypeDefs,
         TableroMetodologiaTypeDefs,
         ContenidoColumnasTypeDefs,
         ProyectoTypeDefs,
         TicketTypeDefs,
+        UsuarioTypeDefs,
+        PrioridadTypeDefs,
     ],
     resolvers: [
-        TaskResolvers,
         TableroMetodologiaResolvers,
         ContenidoColumnasResolvers,
         ProyectoResolvers,
         TicketResolvers,
+        UsuarioResolvers,
+        PrioridadResolvers,
     ]
 });
 
